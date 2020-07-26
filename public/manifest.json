@@ -15,5 +15,13 @@
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/static/css/content.css"],
+      "js": ["/static/js/content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-iant3/ztXGw6dLPlNrlwbEmpnfrLFMdBno02QiFPYyg='; object-src 'self'"
 }
