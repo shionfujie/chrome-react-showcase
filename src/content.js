@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import "./content.css";
+import "./css/content.css";
 import useDocumentKeydown from "./hooks/useDocumentKeydown";
 import useSwitch from "./hooks/useSwitch";
 
