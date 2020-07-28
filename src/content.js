@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import "./content.css";
 import useDocumentKeydown from "./hooks/useDocumentKeydown";
+import useSwitch from "./hooks/useSwitch";
 
 function Main () {
     const [modalIsOpen, openModal, closeModal] = useSwitch()
@@ -24,11 +25,6 @@ function Main () {
             </Modal>
         </div>
     )
-}
-
-function useSwitch() {
-    const [v, setState] = useState(false)
-    return [v, () => setState(true), () => setState(false)]
 }
 
 const app = document.createElement('div');
