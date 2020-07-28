@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import "./content.css";
+import useDocumentKeydown from "./hooks/useDocumentKeydown";
 
 function Main () {
     const [modalIsOpen, openModal, closeModal] = useSwitch()
@@ -23,13 +24,6 @@ function Main () {
             </Modal>
         </div>
     )
-}
-
-function useDocumentKeydown(handleKeydown) {
-    useEffect(() => {
-        document.addEventListener("keydown", handleKeydown)
-        return () => document.removeEventListener("keydown", handleKeydown)
-    })
 }
 
 function useSwitch() {
