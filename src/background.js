@@ -7,5 +7,8 @@ chrome.runtime.onConnect.addListener(({ name, onMessage }) => {
     onMessage.addListener(message => {
       console.log(message.message)
       console.log('Thanks, content.js -- received in background.js')
+      queryActiveTab(activeTab => {
+          console.log('[INFO] TAB ID: ' + activeTab.id)
+      })
     });
 });
