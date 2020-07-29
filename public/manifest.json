@@ -20,5 +20,9 @@
       "js": ["/static/js/content.js"]
     }
   ],
+  "background": {
+    "scripts": ["/static/js/background.js"],
+    "persistent": false
+  },
   "content_security_policy": "script-src 'self' 'sha256-iant3/ztXGw6dLPlNrlwbEmpnfrLFMdBno02QiFPYyg='; object-src 'self'"
 }
